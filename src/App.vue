@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import MyButton from './components/MyButton.vue';
+import { MyButton } from 'my-component-lib';
+import '/node_modules/my-component-lib/dist/style.css';
 </script>
 
 <template>
@@ -13,7 +14,6 @@ import MyButton from './components/MyButton.vue';
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
   font-weight: normal;
 }
 </style>

@@ -1,6 +1,17 @@
 {
-  "name": "vue-project",
+  "name": "my-component-lib",
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-component-lib.umd.js",
+  "module": "./dist/my-component-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-component-lib.es.js",
+      "require": "./dist/my-component-lib.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -9,9 +20,11 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "^3.2.14"
+    "my-component-lib": "my-component-lib-0.0.0.tgz",
+    "vue": "^3.2.20"
   },
   "devDependencies": {
+    "@types/node": "^16.11.9",
     "@vitejs/plugin-vue": "^1.9.3",
     "typescript": "~4.3.5",
     "vite": "^2.6.3",
